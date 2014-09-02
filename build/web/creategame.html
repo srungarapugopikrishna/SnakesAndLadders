@@ -1,0 +1,76 @@
+<html>
+<head>
+<link href="css2.css" rel="stylesheet" type="text/css"></style>
+
+<script type="text/javascript">
+function validate(form)
+{
+if (form.UName.value==null || form.UName.value=="" || form.UName.value==" ")
+  {
+  alert("Enter User Name");
+  return (false);
+  }
+  if (form.BName.value==null || form.BName.value=="" || form.BName.value==" ")
+  {
+  alert("Enter Board Name Name");
+  return (false);
+  }
+  if(form.UName.value.length<5){
+  alert("UserName Should be Greater than 5 digits");
+  return (false);
+  }
+  if(form.Pwd.value.length<5){
+  alert("Password Should be in between 5-10 digits");
+  return (false);
+  }
+  if(form.Pwd.value.length>10){
+  alert("Password Should be in between 5-10 digits");
+  return (false);
+  }
+  if (form.Pwd.value==null || form.Pwd.value=="" || form.Pwd.value==" ")
+  {
+  alert("Enter Board Name Name");
+  return (false);
+  }
+  if(form.UName.value==form.Pwd.value){
+  alert("UserName and password should not be the same");
+  return (false);
+  }
+  //alert(form.Pwd.value);
+  var passwrd=/^[a-zA-Z0-9]+$/;
+  if(!passwrd.test(form.Pwd.value))
+{
+    alert('Special Characters are not allowed');
+    return (false);
+}  
+  
+}
+</script>
+</head>
+<body background="bgr.jpg">
+<div class="main">
+<div class="links"><font size="4.5" ><pre><p><a href="home.html" style="text-decoration:none;color:66FF00">                  HOME            </a><a style="color:66FF00;text-decoration:none"href="reg.jsp" target="blank">  REGISTER            </a><a style="color:66FF00;text-decoration:none"href="rules.html" target="blank">  RULES            </a><a style="color:66FF00;text-decoration:none"href="chatroom.html" target="blank">  CHAT ROOM            </a><a style="color:66FF00;text-decoration:none"href="join.jsp" target="blank">  JOIN GAME            </a><a style="color:66FF00;text-decoration:none"href="contactus.html" target="blank">  CONTACT US            </a></p></pre></font></div>
+ <div class="head"><img style="width:100%;height:100%;"src="gamezone.jpg"></div>
+  
+  <div class="da"> </div>
+  <div class="db">
+	<form name="myForm"  onsubmit="return validate(this)" action="creategame" method=post ><pre>
+	
+	
+	
+	<b ><font size="4" color="orange">	
+        <b>Board Name:</b>		<input type="text" name="BName"  ><br>
+	<b>No:of Players:</b>		<SELECT NAME="Players"><OPTION VALUE="2" SELECTED>2<OPTION VALUE="3">3<OPTION VALUE="4">4</SELECT>
+	<b>Password:</b>		<input type="password" name="Pwd"  ><br>
+	<b>Select Die Color:</b>	<input type="radio" name="col" value="red"><b><font color="red">Red</font> <input type="radio" name="col" value="Yellow"><font color="yellow">Yellow</font> <input type="radio" name="col" value="Blue"><font color="blue">Blue</font> <input type="radio" name="col" value="Green" checked><font color="66FF00">Green</font></b><br>
+				<input type="submit" value="Submit"/>
+		<a href="reg.jsp" target="blank" style="text-decoration:none;color:66FF00"><font size="4.5" ><b>Register</a>     		<a href="forgot.jsp" style="text-decoration:none;color:66FF00">Forgot Password</a></font></b>
+</pre></font>
+</form>
+
+  </div>
+  <div class="dc"> </div>
+   <div class="foot"><font size="5"><p align="center"> <b> &copy; Gopi Krishna Srungarapu</b></p></font></div>
+ </div>
+</body>
+</html>

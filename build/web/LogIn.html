@@ -1,0 +1,70 @@
+<html>
+<head>
+<link href="css2.css" rel="stylesheet" type="text/css"></style>
+
+<script type="text/javascript">
+function validate(form)
+{
+//alert(form.UName.value.charAt(1));
+   
+if (form.UName.value==null || form.UName.value=="" || form.UName.value==" ")
+  {
+  alert("Enter User Name");
+  return (false);
+  }
+  var u1=/^[`~!@#$%^&*()-_]+$/;
+  if(u1.test(form.UName.value.charAt(1)))
+  {
+  alert("UserName Shlout Not start with Special character");
+  return (false);
+  }
+   
+  if(form.UName.value.length<5){
+  alert("UserName Should be Greater than 5 digits");
+  return (false);
+  }
+  if(form.Pwd.value.length<5){
+  alert("Password Should be in between 5-10 digits");
+  return (false);
+  }
+  if(form.Pwd.value.length>10){
+  alert("Password Should be in between 5-10 digits");
+  return (false);
+  }
+  if (form.Pwd.value==null || form.Pwd.value=="" || form.Pwd.value==" ")
+  {
+  alert("Enter Board Name Name");
+  return (false);
+  }
+   
+  //alert(form.Pwd.value);
+  var passwrd=/^[a-zA-Z0-9]+$/;
+  if(!passwrd.test(form.Pwd.value))
+{
+    alert('Special Characters are not allowed');
+    return (false);
+}  
+  
+}
+</script>
+
+</head>
+<body background="bgr.jpg">
+<div class="main">
+<div class="links"><font size="4.5" ><pre><p><a href="home.html" style="text-decoration:none;color:66FF00">             HOME            </a><a href="reg.jsp" style="text-decoration:none;color:66FF00">  REGISTER            </a><a style="color:66FF00;text-decoration:none"href="rules.html">  RULES            </a><a style="color:66FF00;text-decoration:none"href="chatroom.html">  CHAT ROOM            </a><a style="color:66FF00;text-decoration:none"href="contactus.html">  CONTACT US            </a><a style="color:66FF00;text-decoration:none"href="logout" target="blank">LOG OUT         </a></p></pre></font></div>
+ <div class="head"><img style="width:100%;height:100%;"src="login.jpg"></div>
+  
+  <div class="da"> </div>
+  <div class="db">
+	<form name="myForm"   onsubmit="return validate(this)" action="login" method=post >	<pre><font size="4" color="orange"><br>
+			<b>User Name:  <input type="text" name="UName" value=""></b><br><br>
+			<b>Password:  <input type="password" name="Pwd" value=""></b><br><br>
+     <b>       <a href="reg.html" style="text-decoration:none;color:66FF00">             REGISTER             </a><a href="forgot.jsp" style="text-decoration:none;color:66FF00">FORGOT PASSWORD</a></b>            
+					<input type="submit" value="Submit"/></pre>
+
+  </div>
+  <div class="dc"> </div>
+   <div class="foot"><font size="5" color="black" ><p align="center"> <b> &copy; Gopi Krishna Srungarapu</b></p></font></div>
+ </div>
+</body>
+</html>

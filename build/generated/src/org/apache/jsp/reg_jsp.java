@@ -1,0 +1,272 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class reg_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("<link href=\"css2.css\" rel=\"stylesheet\" type=\"text/css\"></style>\n");
+      out.write("</head>\n");
+      out.write("<script type=\"text/javascript\">\n");
+      out.write("function validate(form)\n");
+      out.write("{\n");
+      out.write("if (form.FName.value==null || form.FName.value==\"\" || form.FName.value==\" \")\n");
+      out.write("  {\n");
+      out.write("  alert(\"Enter First Name\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if(form.FName.value.length<5){\n");
+      out.write("  alert(\"FirstName Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if(form.FName.value.length>20){\n");
+      out.write("  alert(\"FirstName Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if (form.LName.value==null || form.LName.value==\"\" || form.LName.value==\" \")\n");
+      out.write("  {\n");
+      out.write("  alert(\"Enter Last Name\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if(form.LName.value.length<5){\n");
+      out.write("  alert(\"LastName Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if(form.FName.value.length>20){\n");
+      out.write("  alert(\"LastName Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  \n");
+      out.write("if (form.UName.value==null || form.UName.value==\"\" || form.UName.value==\" \")\n");
+      out.write("  {\n");
+      out.write("  alert(\"Enter User Name\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("var u1=/^[`~!@#$%^&*()-_]+$/;\n");
+      out.write("  if(u1.test(form.UName.value.charAt(1)))\n");
+      out.write("  {\n");
+      out.write("  alert(\"UserName Shlout Not start with Special character\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  \n");
+      out.write("  var email = form.Mail.value;\n");
+      out.write("    var filter = /^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/;\n");
+      out.write("\n");
+      out.write("    if (!filter.test(email)) {\n");
+      out.write("    alert(email);\n");
+      out.write("\talert('Please provide a valid email address');\n");
+      out.write("    return false;}\n");
+      out.write("\tif(form.Pwd.value.length<5){\n");
+      out.write("  alert(\"Password Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if(form.Pwd.value.length>10){\n");
+      out.write("  alert(\"Password Should be in between 5-10 digits\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if (form.Pwd.value==null || form.Pwd.value==\"\" || form.Pwd.value==\" \")\n");
+      out.write("  {\n");
+      out.write("  alert(\"Enter Password\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  if (!form.Pwd.value==form.Pwd.value)\n");
+      out.write("  {\n");
+      out.write("  alert(\"Enter Correct Password\");\n");
+      out.write("  return (false);\n");
+      out.write("  }\n");
+      out.write("  \n");
+      out.write("  \n");
+      out.write("  \n");
+      out.write("  \n");
+      out.write("  }\n");
+      out.write("</script>\n");
+      out.write("<body background=\"bgr.jpg\">\n");
+      out.write("<div class=\"main\">\n");
+      out.write("<div class=\"links\"><font size=\"4.5\" ><pre><p><a href=\"home.html\" style=\"text-decoration:none;color:66FF00\">             HOME            </a><a style=\"color:66FF00;text-decoration:none\"href=\"rules.html\" target=\"blank\">RULES            </a><a style=\"color:66FF00;text-decoration:none\"href=\"creategame.html\" target=\"blank\">  CREATE GAME            </a><a style=\"color:66FF00;text-decoration:none\"href=\"join.html\" target=\"blank\">  JOIN GAME            </a><a style=\"color:66FF00;text-decoration:none\"href=\"contactus.html\" target=\"blank\">CONTACT US            </a></p></pre></font></div>\n");
+      out.write(" <div class=\"head\"><img style=\"width:100%;height:100%;\"src=\"reg.jpg\"></div>\n");
+      out.write("  <div class=\"da\"></div>\n");
+      out.write(" <div class=\"d1\">\n");
+      out.write(" \n");
+      out.write(" <form action=\"registration\"name=\"myForm\"   method=post onsubmit=\"return validate(this)\"><pre><font size=\"3.5\" color=\"white\">\n");
+      out.write("   <b>First name:</b>\t\t<input type=\"text\" name=\"FName\" value=\"\">\t\t<b>Last name:</b>\t<input type=\"text\" name=\"LName\" value=\"\"><br>\n");
+      out.write("   <b>User name:</b>\t\t<input type=\"text\" name=\"UName\" value=\"\">\t\t<b>Date of Birth*:</b>    <input type=\"hidden\" name=\"DOB\" value=\"\" /><select name=\"dd\" id=\"dd\">\n");
+      out.write("<option value=\"0\">Day</option>\n");
+      out.write("<option value=\"1\">1</option>\n");
+      out.write("<option value=\"2\">2</option>\n");
+      out.write("<option value=\"3\">3</option>\n");
+      out.write("<option value=\"1\">4</option>\n");
+      out.write("<option value=\"2\">5</option>\n");
+      out.write("<option value=\"3\">6</option>\n");
+      out.write("<option value=\"1\">7</option>\n");
+      out.write("<option value=\"2\">8</option>\n");
+      out.write("<option value=\"3\">9</option>\n");
+      out.write("<option value=\"1\">10</option>\n");
+      out.write("<option value=\"2\">11</option>\n");
+      out.write("<option value=\"3\">12</option>\n");
+      out.write("<option value=\"1\">13</option>\n");
+      out.write("<option value=\"2\">14</option>\n");
+      out.write("<option value=\"3\">15</option>\n");
+      out.write("<option value=\"1\">16</option>\n");
+      out.write("<option value=\"2\">17</option>\n");
+      out.write("<option value=\"3\">18</option>\n");
+      out.write("<option value=\"1\">19</option>\n");
+      out.write("<option value=\"2\">20</option>\n");
+      out.write("<option value=\"3\">21</option>\n");
+      out.write("<option value=\"1\">22</option>\n");
+      out.write("<option value=\"2\">23</option>\n");
+      out.write("<option value=\"3\">24</option>\n");
+      out.write("<option value=\"3\">25</option>\n");
+      out.write("<option value=\"1\">26</option>\n");
+      out.write("<option value=\"2\">27</option>\n");
+      out.write("<option value=\"3\">28</option>\n");
+      out.write("<option value=\"1\">29</option>\n");
+      out.write("<option value=\"2\">30</option>\n");
+      out.write("<option value=\"3\">31</option></select><select name=\"mm\" id=\"mm\">\n");
+      out.write("\n");
+      out.write("<option value=\"0\">Month</option>\n");
+      out.write("<option value=\"1\">1</option>\n");
+      out.write("<option value=\"2\">2</option>\n");
+      out.write("<option value=\"3\">3</option>\n");
+      out.write("<option value=\"1\">4</option>\n");
+      out.write("<option value=\"2\">5</option>\n");
+      out.write("<option value=\"3\">6</option>\n");
+      out.write("<option value=\"1\">7</option>\n");
+      out.write("<option value=\"2\">8</option>\n");
+      out.write("<option value=\"3\">9</option>\n");
+      out.write("<option value=\"1\">10</option>\n");
+      out.write("<option value=\"2\">11</option>\n");
+      out.write("<option value=\"3\">12</option></select><select name=\"yy\" id=\"yy\">\n");
+      out.write("\n");
+      out.write("<option value=\"0\">Year</option>\n");
+      out.write("<option value=\"Year\">1950</option>\n");
+      out.write("<option value=\"1991\">1951</option>\n");
+      out.write("<option value=\"1992\">1952</option>\n");
+      out.write("<option value=\"Year\">1953</option>\n");
+      out.write("<option value=\"1991\">1954</option>\n");
+      out.write("<option value=\"1992\">1955</option>\n");
+      out.write("<option value=\"Year\">1956</option>\n");
+      out.write("<option value=\"1991\">1957</option>\n");
+      out.write("<option value=\"1992\">1958</option>\n");
+      out.write("<option value=\"Year\">1959</option>\n");
+      out.write("<option value=\"1991\">1960</option>\n");
+      out.write("<option value=\"1992\">1961</option>\n");
+      out.write("<option value=\"Year\">1962</option>\n");
+      out.write("<option value=\"1991\">1963</option>\n");
+      out.write("<option value=\"1992\">1964</option>\n");
+      out.write("<option value=\"Year\">1965</option>\n");
+      out.write("<option value=\"1991\">1966</option>\n");
+      out.write("<option value=\"1992\">1967</option>\n");
+      out.write("<option value=\"Year\">1968</option>\n");
+      out.write("<option value=\"1991\">1969</option>\n");
+      out.write("<option value=\"1992\">1970</option>\n");
+      out.write("<option value=\"Year\">1971</option>\n");
+      out.write("<option value=\"1991\">1972</option>\n");
+      out.write("<option value=\"1992\">1973</option>\n");
+      out.write("<option value=\"Year\">1974</option>\n");
+      out.write("<option value=\"1991\">1975</option>\n");
+      out.write("<option value=\"1992\">1976</option>\n");
+      out.write("<option value=\"Year\">1977</option>\n");
+      out.write("<option value=\"1991\">1978</option>\n");
+      out.write("<option value=\"1992\">1979</option>\n");
+      out.write("<option value=\"Year\">1980</option>\n");
+      out.write("<option value=\"1991\">1981</option>\n");
+      out.write("<option value=\"1992\">1982</option>\n");
+      out.write("<option value=\"Year\">1983</option>\n");
+      out.write("<option value=\"1991\">1984</option>\n");
+      out.write("<option value=\"1992\">1985</option>\n");
+      out.write("<option value=\"Year\">1986</option>\n");
+      out.write("<option value=\"1991\">1987</option>\n");
+      out.write("<option value=\"1992\">1988</option>\n");
+      out.write("<option value=\"Year\">1989</option>\n");
+      out.write("<option value=\"1991\">1990</option>\n");
+      out.write("<option value=\"1992\">1991</option>\n");
+      out.write("<option value=\"Year\">1992</option>\n");
+      out.write("<option value=\"1991\">1993</option>\n");
+      out.write("<option value=\"1992\">1994</option>\n");
+      out.write("<option value=\"Year\">1995</option>\n");
+      out.write("<option value=\"1991\">1996</option>\n");
+      out.write("<option value=\"1992\">1997</option>\n");
+      out.write("<option value=\"Year\">1998</option>\n");
+      out.write("<option value=\"1991\">1999</option>\n");
+      out.write("<option value=\"1992\">2000</option>\n");
+      out.write("<option value=\"Year\">2001</option>\n");
+      out.write("<option value=\"1991\">2002</option>\n");
+      out.write("<option value=\"1992\">2003</option>\n");
+      out.write("<option value=\"Year\">2004</option>\n");
+      out.write("<option value=\"1991\">2005</option>\n");
+      out.write("<option value=\"1992\">2006</option>\n");
+      out.write("<option value=\"Year\">2007</option>\n");
+      out.write("<option value=\"1991\">2008</option>\n");
+      out.write("</select></select>\n");
+      out.write("\n");
+      out.write("   <b>Sex:</b>\t\t\tMale<input type=\"radio\" name=\"Sex\" value=\"Male\"> Female<input type=\"radio\" name=\"Sex\" value=\"Male\"> <br>\n");
+      out.write("   <b>Email:</b>\t\t<input type=\"text\" name=\"Mail\" value=\"\"><br>\n");
+      out.write("   <b>Password:</b>\t\t<input type=\"password\" name=\"Pwd\" value=\"\">\t\t  <b>Re-type Password:</b><input type=\"password\" name=\"RPwd\" value=\"\"><br>\n");
+      out.write("   <b>Address:</b>\t\t<input type=\"text\" name=\"Address\" value=\"\"><br>\n");
+      out.write("   <b>Secret Question:</b>  \t<select id=\"select\" name=\"select\">\n");
+      out.write("    <option value=\"\" disabled=\"disabled\" selected=\"selected\">Please select a questione</option>\n");
+      out.write("    <option value=\"Whom do you trust more\">Whom do you trust more</option>\n");
+      out.write("    <option value=\"What is your favourite pass time\">What is your favourite pass time</option>\n");
+      out.write("</select><br>\n");
+      out.write("   <b>Type your ans:</b>\t<input type=\"text\" name=\"Ans\" value=\"\"><br>\n");
+      out.write("   <b>Alternate Email:</b>\t<input type=\"text\" name=\"AlMail\" value=\"\">\t\t<b>Phone Number:</b>\t<input type=\"text\" name=\"Phone\" value=\" \"><br>\n");
+      out.write("\t\t\t\t\t   <input type=\"submit\" value=\"Submit\"/></pre></font>\n");
+      out.write("</form>\n");
+      out.write(" \n");
+      out.write(" </div>\n");
+      out.write(" <div class=\"d2\"></div>\n");
+      out.write("   <div class=\"foot\"><font size=\"5\";color=66FF00 ><p align=\"center\"> <b> &copy; Gopi Krishna Srungarapu</b></p></font></div>\n");
+      out.write(" </div>\n");
+      out.write("</body>\n");
+      out.write("</html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
